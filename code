@@ -1,0 +1,28 @@
+public static void moveRobot(Robot robot, int toX, int toY) { 
+  int x = toX - robot.getX();
+  int y = toY - robot.getY();
+  while (x != 0) {
+    if (x < 0) {
+      while (robot.getDirection() != Direction.LEFT) {
+        robot.turnLeft();
+      }
+    } else {
+        while (robot.getDirection() != Direction.RIGHT()) {
+          robot.turnRight();
+        }
+      }
+    robot.stepForward();
+  }
+  while (toY - robot.getY() != 0) {
+    if (y < 0) {
+      while (robot.getDirection() != Direction.DOWN) {
+        robot.turnLeft();
+      }
+    } else {
+        while (robot.getDirection() != Direction.UP()) {
+          robot.turnRight();
+        }
+      }
+    robot.stepForward();
+  }
+}
